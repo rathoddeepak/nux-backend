@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "start": "node index.js",
+    "db_models": "cd scripts && ./sequelize_auto.sh",
+    "s3": "minio server --console-address :9090 ./uploads",
+    "buildcv": "npx build-opencv rebuild"
+  },
+  "dependencies": {
+    "@u4/opencv4nodejs": "^6.5.2",
+    "aws-sdk": "^2.1409.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mathjs": "^11.8.2",
+    "moment": "^2.29.4",
+    "multer": "^1.4.5-lts.1",
+    "onnxruntime-node": "^1.15.1",
+    "pg": "^8.11.1",
+    "sequelize": "^6.32.1",
+    "sharp": "^0.32.1"
+  },
+  "opencv4nodejs": {
+    "disableAutoBuild": 1,
+    "opencvBinDir": "/usr/local/Cellar/opencv/4.8.0/bin/",
+    "opencvIncludeDir": "/usr/local/Cellar/opencv/4.8.0/include/",
+    "opencvLibDir": "/usr/local/Cellar/opencv/4.8.0/lib/"
+  }
+}
